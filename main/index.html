@@ -16,34 +16,28 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
     <script defer src="/__/firebase/init.js"></script>
 
-  <h1>Hello Firebase Auth</h1>
-  <div id="firebaseui-auth-container"></div>
+      <p>Hello, Firebase Hosting!</p>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+　　    <script type="text/javascript">
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/3.5.2/firebase-ui-auth__ja.js"></script>
-  <script src="./config.js"></script>
-  <script>
-    //----------------------------------------------
-    // Firebase UIの設定
-    //----------------------------------------------
-    var uiConfig = {
-        // ログイン完了時のリダイレクト先
-        signInSuccessUrl: '/OPENCHAT.html',
-
-        // 利用する認証機能
-        signInOptions: [
-          firebase.auth.EmailAuthProvider.PROVIDER_ID  //メール認証
-        ],
-
-        // 利用規約のURL(任意で設定)
-        tosUrl: 'http://example.com/kiyaku/',
-        // プライバシーポリシーのURL(任意で設定)
-        privacyPolicyUrl: 'http://example.com/privacy'
-      };
-
-      var ui = new firebaseui.auth.AuthUI(firebase.auth());
-      ui.start('#firebaseui-auth-container', uiConfig);
-</script>
+        var uiConfig = {
+          callbacks: {
+            signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+              return true;
+            },
+            uiShown: function() {
+              document.getElementById('loader').style.display = 'none';
+            }
+          },
+          signInFlow: 'popup',
+          signInSuccessUrl: './success.html',
+          signInOptions: [
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
+          ],
+        };
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
 </body>
 </html>
