@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="./icon/favicon.ico">
-    <title>LadyBirds Open Chat</title>
+    <title>Welcome to LadyBirds</title>
     <meta charset="utf-8">
     <script defer src="/__/firebase/5.3.1/firebase-app.js"></script>
     <script defer src="/__/firebase/5.3.1/firebase-auth.js"></script>
@@ -13,20 +13,23 @@
   </head>
 
   <body>
-    <p>Hello, Firebase Hosting!</p>
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
 
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <script>
       // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCgu8GtqMVuLuJvXd3rVKZkoASJ3QEIDI8",
-        authDomain: "ladybirds-7d802.firebaseapp.com",
-        databaseURL: "https://ladybirds-7d802.firebaseio.com/",
-        storageBucket: ""ladybirds-7d802.appspot.com"",
-        messagingSenderId: "27084868050",      
-      };
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCgu8GtqMVuLuJvXd3rVKZkoASJ3QEIDI8",
+  authDomain: "ladybirds-7d802.firebaseapp.com",
+  databaseURL: "https://ladybirds-7d802.firebaseio.com",
+  projectId: "ladybirds-7d802",
+  storageBucket: "ladybirds-7d802.appspot.com",
+  messagingSenderId: "27084868050",
+  appId: "1:27084868050:web:e419912f985a9f9da1200b",
+  measurementId: "G-4L26Q3P406"
+};
       firebase.initializeApp(config);
     </script>
 
