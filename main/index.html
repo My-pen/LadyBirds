@@ -13,23 +13,20 @@
   </head>
 
   <body>
+    <p>Hello, Firebase Hosting!</p>
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
 
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <script>
       // Initialize Firebase
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCgu8GtqMVuLuJvXd3rVKZkoASJ3QEIDI8",
-  authDomain: "ladybirds-7d802.firebaseapp.com",
-  databaseURL: "https://ladybirds-7d802.firebaseio.com",
-  projectId: "ladybirds-7d802",
-  storageBucket: "ladybirds-7d802.appspot.com",
-  messagingSenderId: "27084868050",
-  appId: "1:27084868050:web:e419912f985a9f9da1200b",
-  measurementId: "G-4L26Q3P406"
-};
+      var config = {
+        apiKey: "<API_KEY>",
+        authDomain: "<PROJECT_ID>.firebaseapp.com",
+        databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+        storageBucket: "<BUCKET>.appspot.com",
+        messagingSenderId: "<SENDER_ID>",      
+      };
       firebase.initializeApp(config);
     </script>
 
@@ -46,7 +43,7 @@ const firebaseConfig = {
                 }
               },
               signInFlow: 'popup',
-              signInSuccessUrl: './OPENCHAT.html',
+              signInSuccessUrl: './success.html',
               signInOptions: [
                 firebase.auth.EmailAuthProvider.PROVIDER_ID,
               ],
