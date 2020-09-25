@@ -28,3 +28,6 @@ body{
     border-radius: 50%;
     background-color: #ff89ff;
 }
+.hide{
+    display: none;
+}
