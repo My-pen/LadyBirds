@@ -1,33 +1,13 @@
 body{
     background-color: white;
 }
-.messages{
-    background-color: black;
-    width: 70%;
-}
-.title{
-    color: white;
-    font-size: 150%;
+.box {
+  width: 100px;
+  height: 100px;
+  background: #000;
 }
 
-.banner{
-    background-color:#ff89ff;
-    position: fixed;
-    top: auto;
-    width: 99%;
-    border-radius: 50px;
-}
-
-.s-message{
-    position: fixed;
-    top: 90%;
-    left: 30%;
-    width: 30%;
-}
-.s_buttom{
-    border-radius: 50%;
-    background-color: #ff89ff;
-}
-.hide{
-    display: none;
+.box:hover {
+  background: #ccc;
+  width: 300px;
 }
