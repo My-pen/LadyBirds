@@ -16,3 +16,7 @@ body{
 . realtimeuserscounter{
   margin-top: 100em;
 }
+.huti{
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke: 1px #000;
+}
