@@ -17,6 +17,5 @@ body{
   margin-top: 100em;
 }
 .huti{
-  -webkit-text-fill-color: #fff;
-  -webkit-text-stroke: 1px #000;
+    text-shadow:1px 0 5px black;
 }
