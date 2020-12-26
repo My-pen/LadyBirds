@@ -1,0 +1,15 @@
+.clock-wrap {
+    margin: auto;
+    width: 350px;
+    height: 350px;
+    background-color: #ffffff;
+  }
+  .clock {
+    display: block;
+    margin: auto;
+  }
+  .timearea {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
