@@ -1,17 +1,24 @@
-name: firebase-hosting-deploy
+name: CI
 
-on:
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
-  firebase-deploy:
+  FrontDeploy:
+    name: FrontDeploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: w9jds/firebase-action@master
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN : ${{ secrets.FIREBASE_TOKEN }}
+    - name: Checkout Repo
+      uses: actions/checkout@master
+    - name: setup Node
+      uses: actions/setup-node@v1
+      with: 
+        node-version: 10.x
+        registry-url: 'https://registry.npmjs.org'
+    - name: Install Dependencies
+      run: npm install
+    - name: Build
+      run: npm run build
+      # ↑ buildが違うコマンドなら、適宜変更して下さい
+    - name: deploy to Firebase Hosting
+      run: |
+        yarn deploy --token=${{ secrets.FIREBASE_TOKEN }}
